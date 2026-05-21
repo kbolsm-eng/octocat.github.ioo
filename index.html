@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Platform Engineer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">AI<span>.Architect</span></div>
+        <ul>
+            <li><a href="#jobs">미래유망직무</a></li>
+            <li><a href="#competency">핵심필수역량</a></li>
+            <li><a href="#roadmap">나의 4년 로드맵</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Intro Hero Section -->
+        <section id="hero">
+            <h1 class="glitch">Beyond Coding</h1>
+            <p>2026 IT 시장을 선도하는 AI 플랫폼 엔지니어 로드맵</p>
+        </section>
+
+        <!-- Menu 1: 미래유망직무 -->
+        <section id="jobs">
+            <h2 class="section-title">Future Promising Jobs</h2>
+            <div class="card-container">
+                <div class="card">
+                    <span class="tag">TOP 1</span>
+                    <h3>LLMOps 엔지니어</h3>
+                    <p>대규모 GPU 자원을 안정적으로 할당하고 비용 효율적으로 운영하는 전문가 [2]</p>
+                </div>
+                <div class="card">
+                    <span class="tag">TOP 2</span>
+                    <h3>FinOps 전문가</h3>
+                    <p>기술과 재무적 감각을 동시에 갖추고 클라우드 비용을 최적화하는 전문가 [2]</p>
+                </div>
+                <div class="card">
+                    <span class="tag">TOP 3</span>
+                    <h3>플랫폼 보안 엔지니어</h3>
+                    <p>인프라 설계 단계부터 보안 정책을 코드로 구현(DevSecOps)하는 전문가 [2]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu 2: 핵심필수역량 -->
+        <section id="competency">
+            <h2 class="section-title">Core Competencies</h2>
+            <div class="grid-container">
+                <div class="grid-item">
+                    <h4>AI 인프라 오케스트레이션</h4>
+                    <p>LLM 학습 및 서빙을 위한 GPU 클러스터 최적화 및 리소스 스케줄링 능력 [1]</p>
+                </div>
+                <div class="grid-item">
+                    <h4>인프라 자동화 및 코드화 (IaC)</h4>
+                    <p>Terraform, CI/CD 등을 활용하여 인프라 구축 자체를 자동화하는 숙련도 [1]</p>
+                </div>
+                <div class="grid-item">
+                    <h4>시스템 가관측성 (Observability)</h4>
+                    <p>모니터링 고도화를 통한 장애 원인 분석 및 시스템 차원의 구조적 개선 능력 [1]</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Menu 3: 나의 4년 로드맵 -->
+        <section id="roadmap">
+            <h2 class="section-title">4-Year Roadmap</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h3>1학년: 기초 체력 함양</h3>
+                        <p>Linux 환경 숙달, 네트워크/OS 기초, Python/Go 마스터. 개인 서버 구축 프로젝트 진행 [3]</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="content">
+                        <h3>2학년: 클라우드 & 컨테이너 입문</h3>
+                        <p>AWS 기초, Docker, IaC 입문. CI/CD 파이프라인 구축 및 자동 배포 경험 [3]</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h3>3학년: K8s & 마이크로서비스</h3>
+                        <p>Kubernetes(EKS) 운영, Service Mesh(Istio), Prometheus 고가용성 아키텍처 설계 [3]</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="content">
+                        <h3>4학년: AI 인프라 전문가 완성</h3>
+                        <p>GPU 스케줄링, LLM 서비스 운영, FinOps 대시보드 구축 및 보안 규제 준수 [3]</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
+2. CSS (style.css)
+다크 모드와 포인트 컬러(형광 그린/블루), 반응형 레이아웃을 설정했습니다.
+:root {
+    --bg-black: #0a0a0c;
+    --nav-navy: #111827;
+    --neon-green: #39FF14;
+    --neon-blue: #00D4FF;
+    --text-white: #e5e7eb;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    background-color: var(--bg-black);
+    color: var(--text-white);
+    font-family: 'Pretendard', sans-serif;
+    line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+    position: fixed; top: 0; width: 100%; height: 70px;
+    background: rgba(17, 24, 39, 0.95);
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 0 5%; z-index: 1000; border-bottom: 1px solid #2d3748;
+}
+.logo { font-size: 1.5rem; font-weight: bold; color: var(--neon-blue); }
+.logo span { color: var(--neon-green); }
+nav ul { display: flex; list-style: none; }
+nav ul li { margin-left: 30px; }
+nav a { color: var(--text-white); text-decoration: none; transition: 0.3s; font-size: 0.95rem; }
+nav a:hover { color: var(--neon-green); }
+
+/* Main Section Styling */
+section { padding: 100px 10% 60px; min-height: 100vh; }
+.section-title { font-size: 2.5rem; margin-bottom: 50px; text-align: center; color: var(--neon-blue); }
+
+/* Hero Section */
+#hero { display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+#hero h1 { font-size: 4rem; color: var(--neon-green); margin-bottom: 20px; }
+
+/* Cards & Grid */
+.card-container, .grid-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.card, .grid-item {
+    background: var(--nav-navy); padding: 30px; border-radius: 15px;
+    border: 1px solid #2d3748; transition: 0.3s;
+}
+.card:hover { border-color: var(--neon-green); transform: translateY(-10px); }
+.tag { color: var(--neon-green); font-size: 0.8rem; font-weight: bold; }
+
+/* Vertical Timeline */
+.timeline { position: relative; max-width: 1200px; margin: 0 auto; }
+.timeline::after { content: ''; position: absolute; width: 4px; background-color: var(--neon-blue); top: 0; bottom: 0; left: 50%; margin-left: -2px; }
+.timeline-item { padding: 10px 40px; position: relative; width: 50%; }
+.timeline-item::after { content: ''; position: absolute; width: 20px; height: 20px; right: -10px; background-color: var(--bg-black); border: 4px solid var(--neon-green); top: 15px; border-radius: 50%; z-index: 1; }
+.right { left: 50%; }
+.right::after { left: -10px; }
+.content { padding: 20px; background: var(--nav-navy); border-radius: 10px; }
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    nav ul { display: none; } /* 모바일에서는 메뉴 단순화 가능 */
+    .timeline::after { left: 31px; }
+    .timeline-item { width: 100%; padding-left: 70px; padding-right: 25px; }
+    .timeline-item::after { left: 21px; }
+    .right { left: 0%; }
+}
+3. JavaScript (script.js)
+간단한 인터랙션을 위해 구성했습니다. (브라우저 기본 scroll-behavior 기능을 보조)
+// 스크롤 시 내비게이션 바 배경 투명도 조절
+window.addEventListener('scroll', function() {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 50) {
+        nav.style.background = 'rgba(10, 10, 12, 0.95)';
+    } else {
+        nav.style.background = 'rgba(17, 24, 39, 0.95)';
+    }
+});
+
+// 메뉴 클릭 시 활성화 표시 (옵션)
+const navLinks = document.querySelectorAll('nav ul li a');
+navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        navLinks.forEach(l => l.style.color = '#e5e7eb');
+        this.style.color = '#39FF14';
+    });
+});
